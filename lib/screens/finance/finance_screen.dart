@@ -62,17 +62,19 @@ class _FinanceScreenState extends State<FinanceScreen>
                       ],
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.arrow_downward),
-                      SizedBox(width: 5),
-                      Text(
-                        'Расходы',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500, fontSize: 16),
-                      ),
-                    ],
+                  Tab(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.arrow_downward),
+                        SizedBox(width: 5),
+                        Text(
+                          'Расходы',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 16),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

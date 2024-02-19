@@ -1,3 +1,4 @@
+import 'package:financial_planner_app/models/bill_model.dart';
 import 'package:financial_planner_app/screens/finance/bloc/finance_bloc.dart';
 import 'package:financial_planner_app/theme/colors.dart';
 import 'package:flutter/material.dart';
@@ -22,17 +23,18 @@ class _IncomeTabState extends State<IncomeTab> {
           builder: (context, state) {
             if (state is LoadedIncomeBillsState) {
               if (state.incomeBills.length != 0) {
+                state.incomeBills.sort((a, b) => a.date.compareTo(b.date));
+                final List<BillModel> _incomeBills = List.from(state.incomeBills.reversed);
                 return Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16),
                   child: ListView.separated(
                     shrinkWrap: true,
                     padding: EdgeInsets.symmetric(vertical: 16),
                     itemCount: state.incomeBills.length,
-                    reverse: true,
                     separatorBuilder: (BuildContext context, int index) =>
                     const SizedBox(height: 15),
                     itemBuilder: (BuildContext context, int index) {
-                      final incomeBill = state.incomeBills[index];
+                      final incomeBill = _incomeBills[index];
                       return Container(
                         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                         decoration: BoxDecoration(

@@ -1,4 +1,5 @@
 import 'package:financial_planner_app/financial_planner_app.dart';
+import 'package:financial_planner_app/screens/analytics/bloc/analytics_bloc.dart';
 import 'package:financial_planner_app/screens/finance/bloc/finance_bloc.dart';
 import 'package:financial_planner_app/screens/mortgage_calculator/bloc/mortgage_calculator_bloc.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,8 @@ void main() {
           create: (context) => MortgageCalculatorBloc()),
       BlocProvider<FinanceBloc>(
           create: (context) => FinanceBloc()),
+      BlocProvider<AnalyticsBloc>(
+          create: (context) => AnalyticsBloc()),
     ],
     child: FinancialPlannerApp(),
   ));

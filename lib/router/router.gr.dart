@@ -46,6 +46,22 @@ abstract class _$AppRouter extends RootStackRouter {
         ),
       );
     },
+    NewsInfoRoute.name: (routeData) {
+      final args = routeData.argsAs<NewsInfoRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: NewsInfoScreen(
+          key: args.key,
+          news: args.news,
+        ),
+      );
+    },
+    NewsListRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const NewsListScreen(),
+      );
+    },
     OnboardingRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -154,6 +170,58 @@ class MortgageResultRouteArgs {
   String toString() {
     return 'MortgageResultRouteArgs{key: $key, propertyValue: $propertyValue, initialFee: $initialFee, term: $term, rate: $rate}';
   }
+}
+
+/// generated route for
+/// [NewsInfoScreen]
+class NewsInfoRoute extends PageRouteInfo<NewsInfoRouteArgs> {
+  NewsInfoRoute({
+    Key? key,
+    required NewsModel news,
+    List<PageRouteInfo>? children,
+  }) : super(
+          NewsInfoRoute.name,
+          args: NewsInfoRouteArgs(
+            key: key,
+            news: news,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'NewsInfoRoute';
+
+  static const PageInfo<NewsInfoRouteArgs> page =
+      PageInfo<NewsInfoRouteArgs>(name);
+}
+
+class NewsInfoRouteArgs {
+  const NewsInfoRouteArgs({
+    this.key,
+    required this.news,
+  });
+
+  final Key? key;
+
+  final NewsModel news;
+
+  @override
+  String toString() {
+    return 'NewsInfoRouteArgs{key: $key, news: $news}';
+  }
+}
+
+/// generated route for
+/// [NewsListScreen]
+class NewsListRoute extends PageRouteInfo<void> {
+  const NewsListRoute({List<PageRouteInfo>? children})
+      : super(
+          NewsListRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'NewsListRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for

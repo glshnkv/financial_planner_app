@@ -97,7 +97,7 @@ class _MortgageResultScreenState extends State<MortgageResultScreen> {
                                     color: (int.parse(
                                                 (state.percentOverAmount * 100)
                                                     .toStringAsFixed(0)) >=
-                                            60)
+                                            50)
                                         ? AppColors.darkBlue
                                         : AppColors.white,
                                     fontSize: 16,
@@ -131,7 +131,7 @@ class _MortgageResultScreenState extends State<MortgageResultScreen> {
                                     color: (int.parse(
                                                 (state.percentLoanAmount * 100)
                                                     .toStringAsFixed(0)) >=
-                                            60)
+                                            50)
                                         ? AppColors.darkBlue
                                         : AppColors.white,
                                     fontSize: 16,

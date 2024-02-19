@@ -23,6 +23,7 @@ dependencies:
   sliding_up_panel: ^2.0.0+1
   chip_list: ^2.4.4+8
   percent_indicator: ^4.2.3
+  fl_chart: ^0.66.2
 
   cupertino_icons: ^1.0.2
 
@@ -47,6 +48,7 @@ flutter:
      - assets/images/tab-icons/
      - assets/images/elements/
      - assets/images/settings/
+     - assets/images/news/
 
   fonts:
     - family: Roboto

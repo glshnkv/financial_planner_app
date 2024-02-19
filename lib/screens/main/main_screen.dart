@@ -1,6 +1,8 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:financial_planner_app/screens/analytics/analytics_screen.dart';
 import 'package:financial_planner_app/screens/finance/finance_screen.dart';
 import 'package:financial_planner_app/screens/mortgage_calculator/mortgage_calculator_screen.dart';
+import 'package:financial_planner_app/screens/news/news_list_screen.dart';
 import 'package:financial_planner_app/screens/settings/settings_screen.dart';
 import 'package:financial_planner_app/theme/colors.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +18,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
-  final _tabs = [FinanceScreen(), FinanceScreen(), MortgageCalculatorScreen(), FinanceScreen(), SettingsScreen()];
+  final _tabs = [FinanceScreen(), AnalyticsScreen(), MortgageCalculatorScreen(), NewsListScreen(), SettingsScreen()];
 
   @override
   Widget build(BuildContext context) {
