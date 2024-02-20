@@ -30,7 +30,6 @@ class _SpendTabState extends State<SpendTab> {
                     shrinkWrap: true,
                     padding: EdgeInsets.symmetric(vertical: 16),
                     itemCount: state.spendBills.length,
-                    reverse: true,
                     separatorBuilder: (BuildContext context, int index) =>
                         const SizedBox(height: 15),
                     itemBuilder: (BuildContext context, int index) {

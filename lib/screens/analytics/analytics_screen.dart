@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:financial_planner_app/screens/analytics/charts_widget/week_bar_widget.dart';
 import 'package:financial_planner_app/screens/analytics/tabs/day_tab.dart';
 import 'package:financial_planner_app/screens/analytics/tabs/month_tab.dart';
@@ -6,6 +7,7 @@ import 'package:financial_planner_app/screens/analytics/tabs/year_tab.dart';
 import 'package:financial_planner_app/theme/colors.dart';
 import 'package:flutter/material.dart';
 
+@RoutePage()
 class AnalyticsScreen extends StatefulWidget {
   const AnalyticsScreen({super.key});
 
